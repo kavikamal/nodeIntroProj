@@ -14,9 +14,7 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/javascript');
             scores.sort((a, b)=>{return b.score - a.score});
-            //if (scores.length>3){
-                    body = scores.slice(0,3); 
-            //}   
+            body = scores.slice(0,3);                
         }
         else if(req.method === "PUT") {
             res.statusCode = 201;
